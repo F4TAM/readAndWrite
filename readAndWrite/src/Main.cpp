@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <fstream>
+#include <string>
 
 
 
@@ -10,6 +11,19 @@ namespace Library
 	{
 		std::cout << t << "\n";
 	}
+
+	void WriteToFile(std::string filepath)
+	{
+		std::ofstream file(filepath);
+		std::string fileContent;
+		std::getline(std::cin, fileContent);
+		file << fileContent;
+		file.close();
+	}
+
+
+
+
 }
 
 
@@ -17,4 +31,5 @@ namespace Library
 int main()
 {
 	Library::print("Hej");
+	Library::WriteToFile("minfil.txt");
 }

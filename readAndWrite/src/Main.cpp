@@ -23,6 +23,18 @@ namespace Library
 		file.close();
 	}
 
+	void ReadFromFile()
+	{
+		std::string fileContent;
+		std::ifstream openFile("minfil.txt");
+		while (std::getline(openFile, fileContent))
+		{
+			std::cout << "Detta står i filen: " << fileContent << "\n";
+		}
+
+		print("Ossian är sus");
+		openFile.close();
+	}
 
 
 }
@@ -33,4 +45,5 @@ int main()
 {
 	Library::print("Hej");
 	Library::WriteToFile("minfil.txt");
+	Library::ReadFromFile();
 }

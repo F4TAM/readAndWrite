@@ -5,13 +5,15 @@
 
 
 namespace Library 
-{
+{	
+	//Template print function
 	template <typename T> 
 	void print(T t)
 	{
 		std::cout << t << "\n";
 	}
 
+	//Writes to textfile
 	void WriteToFile(std::string filepath)
 	{
 		std::ofstream file(filepath);
@@ -20,7 +22,6 @@ namespace Library
 		file << fileContent;
 		file.close();
 	}
-
 
 
 
